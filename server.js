@@ -2,13 +2,7 @@ let fs = require('fs');
 const timeStamp = require('./time.js').timeStamp;
 const http = require('http');
 const WebApp = require('./webapp');
-let registered_users = [{
-  userName: 'bhanutv',
-  name: 'Bhanu Teja Verma'
-}, {
-  userName: 'harshab',
-  name: 'Harsha Vardhana'
-}];
+let registered_users = [{userName:'divyasi', name:'Divya Singh'}];
 let toS = o => JSON.stringify(o, null, 2);
 
 let logRequest = (req, res) => {
