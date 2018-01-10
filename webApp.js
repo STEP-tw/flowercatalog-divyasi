@@ -39,6 +39,7 @@ const initialize = function() {
     POST: {}
   };
   this._preprocess = [];
+  this._postProcessor = [];
 };
 const get = function(url, handler) {
   this._handlers.GET[url] = handler;
@@ -49,6 +50,9 @@ const post = function(url, handler) {
 const use = function(handler) {
   this._preprocess.push(handler);
 };
+const useAfter = function(handler) {
+  this._postProcessor.push(handler);
+}
 let urlIsOneOf = function(urls) {
   return urls.includes(this.url);
 }
