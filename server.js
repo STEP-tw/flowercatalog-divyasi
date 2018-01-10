@@ -5,6 +5,20 @@ const WebApp = require('./webapp');
 let registered_users = [{userName:'divyasi', name:'Divya Singh'}];
 let toS = o => JSON.stringify(o, null, 2);
 
+let getContentType = function(fileName) {
+  let extensionType = fileName.slice(fileName.lastIndexOf('.'))
+  let type = {
+    '.html':'text/html',
+    '.jpg':'img/jpeg',
+    '.css':'text/css',
+    '.js':'text/javascript',
+    '.gif':'img/gif',
+    '.pdf':'aplication/pdf',
+    '.text':'text/plain'
+  }
+  return type[extensionType];
+}
+
 let logRequest = (req, res) => {
   let text = ['------------------------------',
     `${timeStamp()}`,
