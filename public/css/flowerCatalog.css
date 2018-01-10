@@ -1,0 +1,71 @@
+.bg-color {
+  background-color: white;
+}
+h1 {
+  font-size: 45px;
+}
+
+form {
+  margin-left: 70px;
+}
+
+.heading {
+  text-align: center;
+  font-family: serif;
+}
+.head {
+  text-align: center;
+  font-family: serif;
+  color: #ed8c00;
+}
+h4 {
+  text-align: right;
+  font-size: 30px;
+  margin-right: 300px;
+  font-family: serif;
+  color: #ed8c00;
+}
+
+.hr {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 1px
+}
+
+.freshorigins {
+  float: left;
+  margin-left: 40px;
+  width: 700px;
+  height: 500px;
+}
+
+.text-align {
+  margin-right: 500px;
+}
+
+.inputBox {
+  height: 25px;
+  width: 120px;
+}
+
+.border {
+  border-color: transparent;
+}
+.second{
+  border: 1px solid white;
+  padding-left: 70px;
+  margin-left: 700px;
+  margin-top: 25px;
+}
+
+.third{
+  border: 1px solid white;
+  padding-left: 70px;
+  margin-left: 700px;
+  margin-bottom: 50px;
+}
+
+.box-size {
+  height: 50px;
+  width: 150px;
+}
