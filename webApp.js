@@ -26,6 +26,7 @@ const parseCookies = text => {
 let invoke = function(req, res) {
   let handler = this._handlers[req.method][req.url];
   if (!handler) {
+    execute_postProcessor.call(this, req, res)
     res.statusCode = 404;
     res.write('File not found!');
     res.end();
@@ -33,6 +34,13 @@ let invoke = function(req, res) {
   }
   handler(req, res);
 }
+
+const execute_postProcessor = function(req, res) {
+  this._postProcessor.forEach(middleware => {
+    middleware(req, res);
+  })
+}
+
 const initialize = function() {
   this._handlers = {
     GET: {},
@@ -84,6 +92,7 @@ let create = () => {
   rh.get = get;
   rh.post = post;
   rh.use = use;
+  rh.useAfter = useAfter;
   return rh;
 }
 exports.create = create;
